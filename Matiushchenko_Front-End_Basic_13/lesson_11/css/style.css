@@ -1,0 +1,428 @@
+@import url('reset.css');
+
+.header {
+	background:midnightblue;
+	padding: 20px 0;
+}
+
+.logo {
+	display: inline-block;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+}
+
+.header_list {
+	background: midnightblue;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+	column-gap: 36px;
+    white-space: nowrap;
+    flex-grow: 1;
+}
+
+.header_list li {
+	position: relative;
+}
+
+.header_list a {
+    position: relative;
+	color: white;
+	text-decoration: none;
+	font-size: 24px;
+	padding: 0 24px;
+	display: block;
+}
+
+.header_second_list {
+	position: absolute;
+	top: -800%;
+	left: 0;
+	background: transparent;
+    padding: 16px;
+    transition: all 0.4s ease;
+    z-index: 5
+}
+
+.header_list li:hover .header_second_list {
+	top: 100%;
+}
+
+.header_second_list li {
+	background: midnightblue;
+}
+
+.header_third_list {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	background: transparent;
+	padding-right: 8px;
+	transition: all 0.4s ease;
+    opacity: 0;
+    z-index: 1
+}
+
+.header_second_list li:hover .header_third_list {
+    right: 100%;
+    opacity: 100%;
+}
+
+.header_third_list li {
+	background: midnightblue;
+}
+
+.icons a {
+	display: flex;
+    align-items: center;
+    gap: 12px;
+	padding: 12px 12px;
+	background: midnightblue;
+	text-decoration: none;
+}
+
+.icon {
+    fill: none; 
+    width: 30px;
+    height: 30px;
+}
+
+.hidden {
+    display: none;
+}
+
+.icons a:hover {
+    color:plum;
+}
+
+.icons a:hover .icon {
+    fill: plum;
+}
+
+
+
+/* Common */
+
+.bg_aqua {
+	background-color: aqua;
+}
+
+.bg_lawgreen {
+	background-color: lawngreen;
+}
+
+.bg_darkorange {
+	background-color: darkorange;
+}
+
+.outline {
+	outline: 2px solid black;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+
+.font-size_0 {
+	font-size: 0;
+}
+
+.width_800 {
+	width: 800;
+}
+
+.width_400 {
+	width: 400;
+}
+
+
+
+/* Gallery */
+
+.container {
+	width: 1230px;
+	margin: 0 auto;
+    padding: 0 15px;
+    position: relative;
+}
+
+.cards {
+	display: flex;
+	flex-flow: wrap;
+    gap: 24px;
+	flex-direction: row;
+    margin-top: 24px;
+}
+
+.card {
+    position: relative;
+    height: 384px;
+    flex: 1 1 30%;
+}
+
+.card p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    color: white;
+    display: flex;
+    text-align: center;
+    align-items: center;
+	padding: 20px;
+    background: rgba(20, 30, 83, 0.72);
+    z-index: -1;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+	object-fit: cover;
+}
+
+.card:hover p {
+	z-index: 0;
+}
+
+
+
+
+/* Inline-block */
+
+.child_1 {
+    width: 400px;
+    height: 400px;
+    display: inline-block;
+    outline: 2px solid black;
+    font-size: 16px;
+    padding: 24px;
+}
+
+.child_2_1, .child_2_2 {
+    display: inline-block;
+    vertical-align: top;
+    outline: 2px solid black;
+}
+
+.child_2_1 > div {
+    height: 200px;
+    font-size: 16px;
+    padding: 24px;
+}
+
+.child_2_2 > div {
+    height: 133.33px;
+    outline: 2px solid black;
+    font-size: 16px;
+    padding: 24px;
+}
+
+.child_3_1 {
+    display: inline-block;
+    vertical-align: top;
+    height: 400px;
+    outline: 2px solid black;
+    font-size: 16px;
+    padding: 24px;
+}
+
+.child_3_2 {
+    display: inline-block;
+    vertical-align: top;
+    outline: 2px solid black;
+}
+
+.child_3_2_1 {
+    vertical-align: top;
+    height: 200px;
+    outline: 2px solid black;
+    font-size: 16px;
+    padding: 24px;
+}
+
+.child_3_2_2_1 {
+    display: inline-block;
+    vertical-align: top;
+    height: 200px;
+    outline: 2px solid black;
+    font-size: 16px;
+    padding: 24px;
+}
+
+.child_3_2_2_2 {
+    display: inline-block;
+    outline: 2px solid black;
+    font-size: 16px;
+}
+
+.child_3_2_2_2_1 {
+    height: 100px;
+    outline: 2px solid black;
+    font-size: 16px;
+    padding: 24px;
+}
+
+.child_3_2_2_2_2 {
+    height: 100px;
+    outline: 2px solid black;
+    font-size: 16px;
+    padding: 24px;
+}
+
+
+
+/* Float */
+
+.float_child_1 {
+	float: left;
+    outline: 2px solid black;
+    width: 400px;
+    height: 400px;
+    padding: 24px;
+}
+
+
+.float_child_2_1 {
+	float: left;
+}
+
+.float_child_2_1 > div {
+	width: 800px;
+    height: 200px;
+    padding: 24px;
+    outline: 2px solid black;
+}
+
+.float_child_2_2 {
+    float: right;
+}
+
+.float_child_2_2 > div {
+    height: 133.33px;
+	width: 400px;
+    padding: 24px;
+    outline: 2px solid black;
+}
+
+.float_child_3_1 {
+    float: left;
+	width: 400px;
+    height: 400px;
+    outline: 2px solid black;
+    padding: 24px;
+}
+
+.float_child_3_2 {
+	float: left;
+    outline: 2px solid black;
+    width: 800px;
+}
+
+.float_child_3_2_1 {
+    height: 200px;
+    outline: 2px solid black;
+    padding: 24px;
+}
+
+.float_child_3_2_2_1 {
+	float: left;
+    outline: 2px solid black;
+    width: 400px;
+    height: 200px;
+    padding: 24px;
+}
+
+.float_child_3_2_2_2 {
+	float: left;
+}
+
+.float_child_3_2_2_2 > div {
+    outline: 2px solid black;
+	width: 400px;
+    height: 100px;
+    padding: 24px;
+}
+
+
+
+/* Flex */
+
+.flex_parent_1 {
+    display: flex;
+}
+
+.flex_parent_1 > div {
+    outline: 2px solid black;
+    width: 400px;
+    height: 400px;
+    padding: 24px;
+}
+
+.parent_2 {
+    display: flex;
+}
+
+.child_2_1 > div {
+	width: 800px;
+    height: 200px;
+    padding: 24px;
+    outline: 2px solid black;
+}
+
+.child_2_2 > div {
+	width: 400px;
+    height: 133.33px;
+    padding: 24px;
+    outline: 2px solid black;
+}
+
+.parent_3 {
+    display: flex;
+}
+
+.child_3_1 {
+	width: 400px;
+    height: 400px;
+    outline: 2px solid black;
+    padding: 24px;
+}
+
+.child_3_2 {
+    outline: 2px solid black;
+    width: 800px;
+}
+
+.child_3_2_1 {
+    height: 200px;
+    outline: 2px solid black;
+    padding: 24px;
+}
+
+.child_3_2_2 {
+    display: flex;
+    width: 800px;
+}
+
+.child_3_2_2_1 {
+    outline: 2px solid black;
+    width: 400px;
+    height: 200px;
+    padding: 24px;
+}
+
+.child_3_2_2_2 > div {
+    outline: 2px solid black;
+    height: 100px;
+	width: 400px;
+    padding: 24px;
+}
+
+
+
